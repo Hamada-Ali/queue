@@ -12,7 +12,7 @@ class Queue {
         this.tail = null;
         this.length = 0;
     }
-    push(val) {
+    enQueue(val) {
         let newNode = new Node();
         if(!this.head) {
             this.head = newNode;
@@ -30,7 +30,7 @@ class Queue {
             return this;
         }
     }
-    shift() {
+    deQueue() {
         if (!this.head) {
             return false;
         } else {
@@ -46,7 +46,7 @@ class Queue {
 // queue instance
 const q = new Queue();
 
-q.push(0);
-q.push(1);
-q.push(2);
-q.shift()
+q.enQueue(0);
+q.enQueue(1);
+q.enQueue(2);
+q.deQueue()
